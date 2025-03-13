@@ -1,0 +1,80 @@
+============================ tail of one file ============================
+lily@MacBook-Air-Lily cli % tail test_files/text_long.txt
+We want to play this part
+
+Do or die (we'll carry on)
+You'll never make me (we'll carry on)
+Because the world (we'll carry on)
+Will never take my heart
+You can try
+You'll never break me
+We wanna all
+We want to play this part (we'll carry on)%
+lily@MacBook-Air-Lily cli % python3 tail.py test_files/text_long.txt
+We want to play this part
+
+Do or die (we'll carry on)
+You'll never make me (we'll carry on)
+Because the world (we'll carry on)
+Will never take my heart
+You can try
+You'll never break me
+We wanna all
+We want to play this part (we'll carry on)%
+========================== tails of multiple file ==========================
+lily@MacBook-Air-Lily cli % python3 tail.py test_files/text_long.txt test_files/text_short.txt
+==> test_files/text_long.txt <==
+We want to play this part
+
+Do or die (we'll carry on)
+You'll never make me (we'll carry on)
+Because the world (we'll carry on)
+Will never take my heart
+You can try
+You'll never break me
+We wanna all
+We want to play this part (we'll carry on)
+==> test_files/text_short.txt <==
+The future is bulletproof!
+The aftermath is secondary
+It's time to do it now and do it loud
+Killjoys, make some noise!
+================================= no files =================================
+lily@MacBook-Air-Lily cli % python3 tail.py
+20
+19
+18
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+17
+16
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1

@@ -1,0 +1,37 @@
+============================== wc of one file =============================
+lily@MacBook-Air-Lily cli % wc test_files/text_long.txt
+     109     484    2380 test_files/text_long.txt
+lily@MacBook-Air-Lily cli % python3 wc.py test_files/text_long.txt
+     109     484    2380 test_files/text_long.txt
+=========================== wc of multiple file ===========================
+lily@MacBook-Air-Lily cli % wc test_files/text_long.txt test_files/text_short.txt
+     109     484    2380 test_files/text_long.txt
+       3      22     118 test_files/text_short.txt
+     112     506    2498 total
+lily@MacBook-Air-Lily cli % python3 wc.py test_files/text_long.txt test_files/text_short.txt
+     109     484    2380 test_files/text_long.txt
+       3      22     118 test_files/text_short.txt
+     112     506    2498 total
+================================= no files ================================
+lily@MacBook-Air-Lily cli % wc
+who
+said
+
+m
+e
+o
+w
+?
+       8       7      20
+lily@MacBook-Air-Lily cli % python3 wc.py
+who
+said
+
+m
+e
+o
+w
+?
+       8       7      20
+
+
