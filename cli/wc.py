@@ -1,5 +1,6 @@
 import click
 
+
 @click.command()
 @click.argument('files', nargs=-1, type=click.File('r'), required=False)
 def wc(files):
@@ -24,6 +25,7 @@ def wc(files):
 
     if len(files) > 1:
         click.echo(f"    {total_lines:4}    {total_words:4}    {total_bytes:4} total")
+
 
 if __name__ == '__main__':
     wc()

@@ -1,4 +1,4 @@
-=========================== Number all non-blank lines ===========================
+=========================== number all non-blank lines ===========================
 lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | nl
      1  This is
 
@@ -9,7 +9,7 @@ lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | python3 nl.py
 
 
      2  a simple text
-================================ Number all lines ================================
+================================ number all lines ================================
 lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | nl -b a
      1  This is
      2
@@ -20,4 +20,69 @@ lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | python3 nl.py
      2
      3
      4  a simple text
-================================ Number all lines ================================
+============================== number all non-blank lines without files  ==========================
+lily@MacBook-Air-Lily cli % nl
+who
+     1  who
+
+
+said
+     2  said
+
+
+
+
+meow
+     3  meow
+lily@MacBook-Air-Lily cli % python3 nl.py
+who
+     1  who
+
+
+said
+     2  said
+
+
+
+
+meow
+     3  meow
+=========================== number all non-blank lines in file ===========================
+lily@MacBook-Air-Lily cli % python3 nl.py test_files/text_blank_lines.txt
+     1  The future is bulletproof!
+
+     2  The aftermath is secondary
+
+
+     3  It's time to do it now and do it loud
+
+     4  Killjoys, make some noise!%
+=========================== number all lines in file ===========================
+lily@MacBook-Air-Lily cli % python3 nl.py -b a test_files/text_blank_lines.txt
+     1  The future is bulletproof!
+     2
+     3  The aftermath is secondary
+     4
+     5
+     6  It's time to do it now and do it loud
+     7
+     8  Killjoys, make some noise!%
+============================== number all non-blank lines without files  ==========================
+lily@MacBook-Air-Lily cli % nl -b a
+m
+     1  m
+
+     2
+e
+     3  e
+ow
+     4  ow
+lily@MacBook-Air-Lily cli % python3 nl.py -b a
+m
+     1  m
+
+     2
+e
+     3  e
+ow
+     4  ow
