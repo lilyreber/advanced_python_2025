@@ -1,0 +1,23 @@
+=========================== Number all non-blank lines ===========================
+lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | nl
+     1  This is
+
+
+     2  a simple text
+lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | python3 nl.py
+     1  This is
+
+
+     2  a simple text
+================================ Number all lines ================================
+lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | nl -b a
+     1  This is
+     2
+     3
+     4  a simple text
+lily@MacBook-Air-Lily cli % echo -e "This is\n\n\na simple text" | python3 nl.py -b a
+     1  This is
+     2
+     3
+     4  a simple text
+================================ Number all lines ================================
