@@ -19,3 +19,7 @@ A Python module for generating LaTeX documents, tables, and images dynamically.
 * `generate_table` -- generates a LaTeX table from a 2D list.
 * `generate_image`--  generates LaTeX code for embedding an image using the provided file path.
 
+### Installation
+
+```bash
+pip install latex-generator-lilyreber
