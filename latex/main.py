@@ -1,17 +1,30 @@
-from latex.latex_generator.latex_generator import generate_table, generate_doc
+import os
+
+from latex_generator import *
 
 def main():
     table = [
-        ["Col1", "Col2", "Col3"],
-        ["Row1", 1, 2],
-        ["Row2", 3, 4],
-        ["Row3", 5, 6],
-        ["Row4", 7, 8]
+        ["Species", "Average duration of one sleep cycle, minutes", "REM sleep as \% of total sleep duration"],
+        ["Human", 90, 25],
+        ["Cat", 26, 30],
+        ["Rabbit", 24, 3],
+        ["Rat", 13, 20]
     ]
-    blocks = [generate_table(table)]
+
+
+
+    if not os.path.exists("artifacts"):
+        os.makedirs("artifacts")
+
 
     with open("artifacts/table.tex", "w") as file:
-        file.write(generate_doc(blocks))
+        file.write(generate_doc([generate_table(table)]))
+
+    blocks = [generate_image("cat.png"), generate_table(table)]
+    with open("artifacts/table_image.tex", "w") as file:
+        file.write(generate_doc(blocks, packages=["graphicx"]))
+
+    os.system("pdflatex -output-directory=artifacts artifacts/table_image.tex")
 
 if __name__ == "__main__":
     main()
