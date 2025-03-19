@@ -3,7 +3,7 @@ name = "advanced_python_2025"
 version = "0.1.0"
 description = "Homeworks for advanced python course at HSE. "
 authors = [
-    {name = "lilyreber"}
+    { name = "lilyreber" }
 ]
 readme = "README.md"
 requires-python = ">=3.10"
